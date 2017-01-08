@@ -44,7 +44,8 @@ namespace LiteCart
             var province = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("select[name=zone_code]")));
             new SelectElement(province).SelectByText("Ontario");
 
-            driver.FindElement(By.Name("email")).SendKeys("john.smith.canada@gmail.com");
+            string email = "john.smith.canada" + new Random().Next(1000).ToString() + "@gmail.com";
+            driver.FindElement(By.Name("email")).SendKeys(email);
             driver.FindElement(By.Name("phone")).SendKeys("+15198000808");
             driver.FindElement(By.Name("password")).SendKeys("11111");
             driver.FindElement(By.Name("confirmed_password")).SendKeys("11111");
@@ -54,7 +55,7 @@ namespace LiteCart
             wait.Until(ExpectedConditions.ElementExists(By.CssSelector("div#box-account li:last-child > a[href*=logout]"))).Click();
 
             IWebElement loginform = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("div#box-account-login")));
-            loginform.FindElement(By.Name("email")).SendKeys("john.smith.canada@gmail.com");
+            loginform.FindElement(By.Name("email")).SendKeys(email);
             loginform.FindElement(By.Name("password")).SendKeys("11111");
             loginform.FindElement(By.Name("login")).Click();
 
