@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutomatedTester.BrowserMob">
+      <HintPath>C:\Tools\AutomatedTester.BrowserMob-master\AutomatedTester.BrowserMob\bin\Debug\AutomatedTester.BrowserMob.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -73,6 +76,8 @@
     <Compile Include="Task12.cs" />
     <Compile Include="Task13.cs" />
     <Compile Include="Task14.cs" />
+    <Compile Include="Task17.cs" />
+    <Compile Include="Task19.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
